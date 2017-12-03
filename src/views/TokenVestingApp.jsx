@@ -76,13 +76,13 @@ class TokenVestingApp extends Component {
       total,
       released,
       vested: await tokenVesting.vestedAmount(token),
-      decimals: await tokenContract.decimals(),
+      decimals: await tokenContract.DECIMALS(),
       beneficiary: await tokenVesting.beneficiary(),
       owner: await tokenVesting.owner(),
       revocable: await tokenVesting.revocable(),
       revoked: await tokenVesting.revoked(token),
-      name: await tokenContract.name(),
-      symbol: await tokenContract.symbol(),
+      name: await tokenContract.NAME(),
+      symbol: await tokenContract.SYMBOL(),
       loading: false
     })
   }

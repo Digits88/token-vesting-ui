@@ -9,8 +9,8 @@ export async function getTokenVesting(address) {
 }
 
 export async function getSimpleToken(address) {
-  const SimpleToken = contract(require('contracts/SimpleToken.json'))
+  const SingularityNetToken = contract(require('contracts/SingularityNetToken.json'))
   const provider = await Network.provider()
-  SimpleToken.setProvider(provider)
-  return SimpleToken.at(address)
+  SingularityNetToken.setProvider(provider)
+  return SingularityNetToken.at(address)
 }
